@@ -1,0 +1,26 @@
+{
+  "name": "bankaccount",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "imagekit": "^5.2.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4"
+  },
+  "main": "app.js",
+  "devDependencies": {
+    "express": "^4.19.2",
+    "prisma": "^5.19.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
