@@ -8,11 +8,15 @@ var INDEX_ROUTES = require('./routes/index');
 
 var app = express();
 
+const Sentry = require('./config/sentryConfig');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(Sentry.Handlers.requestHandler());
+app.use(Sentry.Handlers.errorHandler());
 
 // Check Connection to Database
 // POOL.connect((err) => {
